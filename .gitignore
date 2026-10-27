@@ -1,0 +1,8 @@
+build/
+*.user
+*.sqlite
+*.db
+.vscode/
+.idea/
+aqtinstall.log
+dist/
