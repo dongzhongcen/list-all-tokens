@@ -9,8 +9,10 @@
 - 按平台和日期筛选
 - 输入、输出、总 token 汇总
 - 删除记录和 UTF-8 CSV 导出
+- 手动填写中转站用量接口地址和 API Token，点击按钮自动请求并记录用量
+- 自动识别常见 JSON 字段：`input_tokens`、`prompt_tokens`、`output_tokens`、`completion_tokens`、`total_tokens`
 
-应用只保存用户主动录入的统计数据，不上传 API 密钥或 token。
+应用只在请求时使用内存中的 API Token，不写入数据库；接口地址和返回数据不会上传到第三方。
 
 ## 构建
 

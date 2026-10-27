@@ -7,13 +7,13 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets Sql)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Sql Network)
 
 qt_add_executable(list-all-tokens
     src/main.cpp
 )
 
-target_link_libraries(list-all-tokens PRIVATE Qt6::Widgets Qt6::Sql)
+target_link_libraries(list-all-tokens PRIVATE Qt6::Widgets Qt6::Sql Qt6::Network)
 
 if(WIN32)
     set_target_properties(list-all-tokens PROPERTIES WIN32_EXECUTABLE TRUE)
